@@ -40,14 +40,23 @@ document.addEventListener("DOMContentLoaded", () => {
     like.addEventListener("click", liked);
 
     function liked() {
-      var li = document.createElement("li");
-      li.innerText = element.innerText + " has been liked X times!";
-      likesSection[0].appendChild(li);
+      // if element.innerText === has already appeared in list
+      //
+      // else
+        var li = document.createElement("li");
+        li.innerText = element.innerText + " has been liked X times!";
+        likesSection[0].appendChild(li);
     }
 
 
-
     /////     USER CAN PAUSE COUNTER    /////
+
+    var pause = document.getElementById("pause");
+    
+    pause.addEventListener("click", function);
+
+
+
 
   }
 
