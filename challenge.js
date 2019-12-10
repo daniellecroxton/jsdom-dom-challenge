@@ -56,7 +56,9 @@ document.addEventListener("DOMContentLoaded", () => {
     pause.addEventListener("click", paused);
 
     function paused(){
-      if (pause.innerText == "pause") {
+      // var timesClicked = 0;
+      // timesClicked + 1;
+      if (plus.disabled == false) {
         clearInterval(timer);
         minus.disabled = true;
         plus.disabled = true;
@@ -70,8 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
         counter();
       }
     }
-
-
 
   }
 
@@ -100,9 +100,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const appendNewComment = comment => {
     document.getElementById("list").appendChild(comment);
-
-
-
 
 
   };
