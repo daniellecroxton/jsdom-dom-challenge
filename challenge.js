@@ -52,9 +52,24 @@ document.addEventListener("DOMContentLoaded", () => {
     /////     USER CAN PAUSE COUNTER    /////
 
     var pause = document.getElementById("pause");
-    
-    pause.addEventListener("click", function);
 
+    pause.addEventListener("click", paused);
+
+    function paused(){
+      if (pause.innerText == "pause") {
+        clearInterval(timer);
+        minus.disabled = true;
+        plus.disabled = true;
+        like.disabled = true;
+        pause.innerText = "resume";
+      } else {
+        minus.disabled = false;
+        plus.disabled = false;
+        like.disabled = false;
+        pause.innerText = "pause";
+        counter();
+      }
+    }
 
 
 
