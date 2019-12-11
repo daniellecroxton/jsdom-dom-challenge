@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     var element = document.getElementById("counter");
     var numericalElement = parseInt(element.innerText);
 
-
     /////     TIMER INCREASES EVERY SECOND     /////
 
       var timer = setInterval(counting, 1000);
@@ -53,18 +52,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     var pause = document.getElementById("pause");
 
-    pause.addEventListener("click", paused);
+    pause.onclick = paused;
 
     function paused(){
-      // var timesClicked = 0;
-      // timesClicked + 1;
       if (plus.disabled == false) {
         clearInterval(timer);
         minus.disabled = true;
         plus.disabled = true;
         like.disabled = true;
         pause.innerText = "resume";
-      } else {
+      } else if (plus.disabled !== false) {
         minus.disabled = false;
         plus.disabled = false;
         like.disabled = false;
